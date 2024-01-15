@@ -21,7 +21,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: ktde24/github-actions-app
-        tags: v3, latest
+        tags: ${{ github.sha }}, v1.0.0  # 빌드 할 때마다 생성되는 해시값을 태그에 지정
         registry: docker.io
         username: ktde24
         password: dckr_pat_t6_KOi8zUOjsYxUdRhadWfSzSO4
